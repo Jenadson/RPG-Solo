@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>RPG - Four Against</title>
+</head>
+<body>
+    <header>
+        <h1>RPG - Four Against
+            Darkness </h1>
+    </header>
+    <section class="container">
+        <div class="map">
+            <div id="api-pixel">
+                <iframe src="https://app.dungeonscrawl.com/" width="800" height="1000" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div id="roll">
+            <div id="show-table">
+                <div id="avisos">
+                    <h2>Tabelas serão mostradas aqui!!!</h2>
+                    <h2>Mapas serão mostrados aqui!!!</h2> 
+                    <br>
+                    <hr> 
+                </div>
+                 
+                <div id="show-roll">
+
+                </div>
+                <div id="show-img">
+
+                </div>
+            </div>
+            <div id="roll-button">
+                <button onclick="roll1d6()" id="">Role para 1D6</button>
+                <button onclick="rollIniciais()">Role para Salas Iniciais</button>
+                <button onclick="salas()">Role para Salas</button>
+                <button onclick="contSalas()">Conteúdo das Salas</button>
+                <button onclick="capangas()">Role para capangas</button>
+                <button onclick="tesouro()">Role para Tesouros</button>
+                <button onclick="armadilhas()">Role para Armadilhas</button>
+                <button onclick="vermes()">Role para Vermes</button>
+                <button onclick="chefes()">Role para Chefões</button>
+                <button onclick="especiais()">Role para Recursos Especiais</button>
+                <button onclick="eventos()">Role para Eventos Especiais</button>
+                <button onclick="magicos()">Role para Tesouros Mágicos</button>
+                <button onclick="missoes()">Role para Missões</button>
+                <button onclick="epicas()">Role para Recompensas Épicas</button>
+                <button onclick="roomEmpyt()">Role para Sala vazia</button>
+                <button onclick="monstrosErr()">Role para Monstros errantes</button>
+                <button  onclick="doorLock()">Porta trancada regra opicional</button>
+            </div>
+        </div>
+        <div class="character-sheets">
+            <div  class="sheets-column">
+                <div class="sheets">
+                    <div id="sheet01">
+                        <div>
+                            <h2>Escolha seu personagem</h2>
+                            <select id="tipo01" name="tipo"  class="tipo">
+                                <option value="1">Guerreiro</option>
+                                <option value="2">Clérigo</option>
+                                <option value="3">Ladino</option>
+                                <option value="4">Mago</option>
+                                <option value="5">Bárbaro</option>
+                                <option value="6">Elfo</option>
+                                <option value="7">Anão</option>
+                                <option value="8">Halfling</option>
+                            </select>
+                            <button onclick="player01()" style="margin: 0 auto;"> Escolher</button>
+                        </div>
+                    </div>
+             
+
+                </div>
+
+                
+
+                <div class="sheets">
+                    <div id="sheet02">
+                        <div>
+                            <h2>Escolha seu personagem</h2>
+                            <select id="tipo02" name="tipo"  class="tipo">
+                                <option value="1">Guerreiro</option>
+                                <option value="2">Clérigo</option>
+                                <option value="3">Ladino</option>
+                                <option value="4">Mago</option>
+                                <option value="5">Bárbaro</option>
+                                <option value="6">Elfo</option>
+                                <option value="7">Anão</option>
+                                <option value="8">Halfling</option>
+                            </select>
+                            <button onclick="player02()" style="margin: 0 auto;"> Escolher</button>
+                        </div>
+                    </div>
+                    
+                  
+                
+
+                </div>
+            </div>
+           
+            <div class="sheets-column">
+                <div class="sheets">
+                    <div id="sheet03">
+                        <div>
+                            <h2>Escolha seu personagem</h2>
+                            <select id="tipo03" name="tipo"  class="tipo">
+                                <option value="1">Guerreiro</option>
+                                <option value="2">Clérigo</option>
+                                <option value="3">Ladino</option>
+                                <option value="4">Mago</option>
+                                <option value="5">Bárbaro</option>
+                                <option value="6">Elfo</option>
+                                <option value="7">Anão</option>
+                                <option value="8">Halfling</option>
+                            </select>
+                            <button onclick="player03()" style="margin: 0 auto;"> Escolher</button>
+                        </div>
+                    </div>
+                 
+                
+
+                </div>
+
+                
+
+                <div class="sheets">
+                    <div id="sheet04">
+                        <div >
+                            <h2>Escolha seu personagem</h2>
+                            <select id="tipo04" name="tipo"  class="tipo">
+                                <option value="1">Guerreiro</option>
+                                <option value="2">Clérigo</option>
+                                <option value="3">Ladino</option>
+                                <option value="4">Mago</option>
+                                <option value="5">Bárbaro</option>
+                                <option value="6">Elfo</option>
+                                <option value="7">Anão</option>
+                                <option value="8">Halfling</option>
+                            </select>
+                            <button onclick="player04()" style="margin: 0 auto;"> Escolher</button>
+                        </div>
+                    </div>
+                 <!--   <div id="sheet04">
+                        <div class="sheet-l1">
+                            <div>
+                                <h3>Nome:</h3>
+                            </div>
+                            <div>
+                                <input type="text" class="name" placeholder="Personagem">
+                            </div>
+                            <div>
+                                <h3>Nível: </h3>
+                            </div>
+                            <div>
+                                <input type="number" name="lvl" class="lvl" value="1">
+                            </div>
+                            <div>
+                                <h3>PO:</h3>
+                            </div>
+                            <div>
+                                <input type="number" name="po" class="po" placeholder="$$$">
+                            </div>
+                        </div>
+                        <div class="sheet-l2">
+                            <div>
+                                <h3>Tipo: </h3>
+                            </div>
+                            <div>
+                                <select name="tipo"  class="tipo">
+                                    <option value="1">Guerreiro</option>
+                                    <option value="2">Clérigo</option>
+                                    <option value="3">Ladino</option>
+                                    <option value="4">Mago</option>
+                                    <option value="5">Bárbaro</option>
+                                    <option value="6">Elfo</option>
+                                    <option value="7">Anão</option>
+                                    <option value="8">Halfling</option>
+                                </select>
+                            </div>
+                            <div>
+                                <h3>Vida:</h3>
+                            </div>
+                            <div>
+                                <input type="number" name="life" class="life" placeholder="---">
+                            </div>
+                        </div>
+                        <div class="sheet-l3">
+                            <div>
+                                <h3>Ataque:</h3>
+                            </div>
+                            <div>
+                                <select name="atk" class="atk">
+                                    <option value="-1">-1</option>
+                                    <option value="0">0</option>
+                                    <option value="1">+1</option>
+                                    <option value="2">+2</option>
+                                    <option value="3">+3</option>
+                                    <option value="4">+4</option>
+                                    <option value="5">+5</option>
+                                </select>
+                            </div>
+                            <div>
+                                <h3>Defesa:</h3>
+                            </div>
+                            <div>
+                                <select name="def" class="def">
+                                    <option value="-1">-1</option>
+                                    <option value="0">0</option>
+                                    <option value="1">+1</option>
+                                    <option value="2">+2</option>
+                                    <option value="3">+3</option>
+                                    <option value="4">+4</option>
+                                    <option value="5">+5</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="hability">
+                            <h3>Habilidades:</h3>
+                        <textarea name="" id="" cols="45" rows="3"></textarea>
+                        </div>
+                        <div class="clues">
+                            <h3>Pistas:</h3>
+                            <textarea name="" id="" cols="45" rows="3"></textarea>
+                        </div>
+                        <div class="equip">
+                            <h3>Equipamento:</h3>
+                            <textarea name="" id="" cols="45" rows="3"></textarea>
+                        </div>
+                    </div>-->
+                
+
+                </div>
+            </div>
+
+            <div id="monstros">
+                <h3>Monstros Derrotados</h3>
+                <div class="tab-monstros">
+                    <div>
+                        <h3>Vermes</h3>
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                    </div>
+                    <div>
+                        <h3>Capamgas</h3>
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                    </div>
+                </div>
+
+                <div class="tab-monstros">
+                    <div>
+                        <h3>Chefes</h3>
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                    </div>
+                    <div>
+                        <h3>Monstros Bizarros</h3>
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                        <input type="text" class="itm-monstros">
+                    </div>
+                </div>
+                
+            </div>
+           
+        </div>
+        
+
+    </section>
+    <footer>
+        <p style="color: #fff; text-align: center; font-family: Arial, Helvetica, sans-serif;">Basilio's Dev (jenadson.basilio@gmail.com)</p>
+    </footer>    
+</body>
+</html>
